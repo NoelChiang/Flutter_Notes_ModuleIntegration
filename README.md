@@ -172,8 +172,8 @@ export FLUTTER_BUILD_MODE=$mode
 export VERBOSE_SCRIPT_LOGGING=1 && "$FLUTTER_ROOT"/packages/flutter_tools/bin/xcode_backend.sh build
 ```
 
-In Podfile, add code to replace the insert run script in podhelper.rb,  
-all things can be done by pod install
+In Podfile, add code to rewrite/replace podhelper.rb,  
+all things can be done by pod install, no need to manual revise run script in build phases, everything can under source control
 
 ```
 flutter_app_path = '{Flutter_module_path}'
