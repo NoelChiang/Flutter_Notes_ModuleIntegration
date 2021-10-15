@@ -1,0 +1,1 @@
+set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/main_module/.ios/Flutter/flutter_export_environment.sh\"\nif [[ \"${PLATFORM_DISPLAY_NAME}\" == \*\"Simulator\"\* ]]; then\n\tmode=\"debug\"\nelse\n\tmode=\"release\"\nfi\nexport FLUTTER_BUILD_MODE=$mode\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n
